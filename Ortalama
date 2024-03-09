@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class CiftSayi2 {
+    public static void main(String[] args){
+        int k;
+        int toplam=0,adet=0;
+
+        Scanner input=new Scanner(System.in);
+        System.out.printf("Sayı giriniz:");
+        k=input.nextInt();
+
+        for(int a=1;a<=k;a++){
+            if(a %3 == 0 && a %4 == 0){
+                toplam=toplam+a;
+                adet++;
+            }
+        }
+        if (adet>0){
+            System.out.printf("Ortalama:"+ toplam/adet);
+        }else{
+            System.out.printf("Belirtilen koşula uygun sayı bulunamadı");
+        }
+
+
+    }
+}
